@@ -6,7 +6,6 @@ class Setter {
        // Write code here
        Person person = new Person();
        person.setName("Ankit");
-       System.out.print(person.getName());
    }
 }
 
