@@ -21,7 +21,7 @@ class BinarySearch {
             middle = (left+right)/2;
             if(arr[middle] == num){
                 return num;
-            } else if (arr[middle] > middle){
+            } else if (arr[middle] > num){
                 right = middle - 1;
             } else {
                 right = middle + 1;
