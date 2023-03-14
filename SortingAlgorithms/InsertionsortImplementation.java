@@ -17,6 +17,7 @@ import java.util.Scanner;
                 int v = array[i]; 
                 int j = i; 
                 
+                // Ascending order array[j-1]>v and descending order array[j-1]<v
                 while(j>=1 && array[j-1]>v){   
                     array[j] = array[j-1]; 
                     j--; 
