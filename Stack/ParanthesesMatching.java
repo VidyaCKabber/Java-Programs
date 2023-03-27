@@ -34,7 +34,7 @@ public class ParanthesesMatching
 	                }
 	            }
 	        } else{
-	            new Exception("Invalid");
+	            return false;
 	        }
 	    }
 	    
