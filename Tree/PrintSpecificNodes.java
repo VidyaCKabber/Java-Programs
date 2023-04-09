@@ -80,24 +80,24 @@ class Tree{
 	}
 	
 	// Method to print nodes that are multiple of root node
-	public void printNodes(Node node, int firstRootNodeData){
-	    if(firstRootNodeData == 0){
+	public void printNodes(Node node){
+	    if(root.data == 0){
 	        System.out.println("Division by zero is undefined");
     	} else {
     	    if(node == null){
                 return;
             }
-    		printNodes(node.left, firstRootNodeData);
+    		printNodes(node.left);
             
-            if(node.data % firstRootNodeData == 0 || node.data % firstRootNodeData == 0){
+            if(node.data % root.data == 0){
                 System.out.print(node.data + " ");
             }
             
-            printNodes(node.right, firstRootNodeData);
+            printNodes(node.right);
     	}
 	}
 }
-// WARNING: Do not edit the code given below, otherwise the test cases might fail
+//WARNING: Do not edit the code given below, otherwise the test cases might fail
 class PrintSpecificNodes{
 	public static void main(String[] x){
 		Tree tree = new Tree();
@@ -117,7 +117,8 @@ class PrintSpecificNodes{
     			elementsArr[i] = sc.nextInt();
     		}
     		tree.root = tree.insertNode(elementsArr,tree.root,0);
-    		tree.printNodes(tree.root, tree.root.data);
+    		tree.printNodes(tree.root);
 		}
 	}
 }
+
